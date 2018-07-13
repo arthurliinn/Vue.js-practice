@@ -15,7 +15,12 @@
             <p v-if="score >=6">Vue.js so easy</p>
             <p v-if="score >10">you need inpu 1~10</p>
             <p v-else>still learning Vue.js</p>
-        </div>.
+
+        </div>
+        <div v-if="!score">
+            <p>請輸入數值</p>
+        </div>
+
 
         <p>你覺得Vue.js簡單嗎?請輸入1~10分</p>
         <input type="text" v-model="score">

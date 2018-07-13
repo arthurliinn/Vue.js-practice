@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>0 Hello World</title>
+</head>
+
+<body>
+    <div id="app">
+        <ul>
+            <!--“item in items”這裡的in你要改成of 也是沒問題的-->
+            <li v-for="(item ,index) in items">
+                {{presentMessage}} - {{index}} - {{item.message}}
+            </li>
+        </ul>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.1/vue.min.js">
+    </script>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                presentMessage: '台北市',
+                items: [
+                    { message: '中正區' },
+                    { message: '中山區' },
+                    { message: '大同區' }
+                ]
+            }
+        })
+    </script>
+</body>
