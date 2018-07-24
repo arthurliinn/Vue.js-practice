@@ -17,7 +17,8 @@
             <p v-else>still learning Vue.js</p>
 
         </div>
-        <div v-if="!score">
+        <div v-if="isNaN">
+            <!--v-if=!score也可以-->
             <p>請輸入數值</p>
         </div>
 
